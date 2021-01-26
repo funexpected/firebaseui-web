@@ -1038,11 +1038,11 @@ firebaseui.auth.AuthUI.prototype.sendSignInLinkToEmail =
   // Generate random 32 byte key.
   var sid = firebaseui.auth.util.generateRandomAlphaNumericString(32);
   // Assert email link sign-in allowed.
-  if (!this.getConfig().isEmailLinkSignInAllowed()) {
-    return goog.Promise.reject(
-        new Error(
-            'Email link sign-in should be enabled to trigger email sending.'));
-  }
+  // if (!this.getConfig().isEmailLinkSignInAllowed()) {
+  //   return goog.Promise.reject(
+  //       new Error(
+  //           'Email link sign-in should be enabled to trigger email sending.'));
+  // }
   var actionCodeSettings =/** @type {!firebase.auth.ActionCodeSettings} */ (
       this.getConfig().getEmailLinkSignInActionCodeSettings());
   var urlBuilder = new firebaseui.auth.ActionCodeUrlBuilder(
